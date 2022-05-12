@@ -53,6 +53,7 @@ def egresa_visita (dni):
     else:
         q = f"""INSERT INTO ingreso_egresos(fechahora_out)
         VALUES('{datetime.datetime.now().replace(microsecond=0).isoformat()}')"""
+    conn.close()
     
     
 
@@ -86,6 +87,7 @@ def busca_vistantes(fecha_desde, fecha_hasta, destino, dni):
         print(resu)
     else:
         print("No existe esa persona")
+    conn.close()
 
 
 def iniciar():
