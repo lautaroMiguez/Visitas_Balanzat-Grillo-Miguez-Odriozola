@@ -76,9 +76,9 @@ def busca_vistantes(fecha_desde, fecha_hasta, destino, dni):
     conn = sqlite3.connect('recepcion.db')
     q = f"""SELECT * FROM ingresos_egresos 
     WHERE fechahora_in = '{fecha_desde}' 
-    or fechahora_out = '{fecha_hasta}
-    or destino = '{destino}' 
-    or dni = '{dni}'
+    OR fechahora_out = '{fecha_hasta}
+    OR destino = '{destino}' 
+    OR dni = '{dni}'
     """
 
     resu = conn.execute(q)
